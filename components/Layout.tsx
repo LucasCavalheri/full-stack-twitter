@@ -1,5 +1,5 @@
-import FollowBar from '@/layout/FollowBar';
-import Sidebar from '@/layout/Sidebar';
+import FollowBar from '@/components/layout/FollowBar';
+import Sidebar from '@/components/layout/Sidebar';
 import React from 'react';
 
 interface LayoutProps {
