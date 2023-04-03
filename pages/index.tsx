@@ -1,7 +1,9 @@
+import Header from '@/components/Header';
+
 export default function Home() {
   return (
-    <div>
-      <div className='text-3xl font-bold underline text-white'>Hello, World!</div>
-    </div>
+    <>
+      <Header label='Home' />
+    </>
   )
 }
