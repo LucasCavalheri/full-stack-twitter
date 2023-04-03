@@ -55,7 +55,7 @@ const Sidebar = () => {
           />
           <SidebarItem 
             href='/notifications'
-            label='Home'
+            label='Notifications'
             icon={BsBellFill}
             auth={true}
             alert={currentUser?.hasNotification}
