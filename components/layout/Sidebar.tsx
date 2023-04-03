@@ -42,7 +42,7 @@ const Sidebar = () => {
               key={item.href}
               href={item.href}
               label={item.label}
-              icon={item.icon!}
+              icon={BiLogOut}
               auth={item.auth}
             />
           ))}
