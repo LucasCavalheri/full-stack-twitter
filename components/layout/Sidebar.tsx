@@ -38,7 +38,7 @@ const Sidebar = () => {
       <div className='flex flex-col items-end'>
         <div className='space-y-2 lg:w-[230px]'>
           <SidebarLogo />
-          {items.map((item) => (
+          {/* {items.map((item) => (
             <SidebarItem
               key={item.href}
               href={item.href}
@@ -47,7 +47,25 @@ const Sidebar = () => {
               auth={item.auth}
               alert={item.alert}
             />
-          ))}
+          ))} */}
+          <SidebarItem 
+            href='/'
+            label='Home'
+            icon={BsHouseFill}
+          />
+          <SidebarItem 
+            href='/notifications'
+            label='Home'
+            icon={BsBellFill}
+            auth={true}
+            alert={currentUser?.hasNotification}
+          />
+          <SidebarItem 
+            href={`/users/${currentUser?.id}`}
+            label='Profile'
+            icon={FaUser}
+            auth={true}
+          />
           {currentUser && (
             <SidebarItem
               onClick={() => signOut()}
