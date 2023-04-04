@@ -40,11 +40,13 @@ const Avatar: React.FC<AvatarProps> = ({ userId, isLarge, hasBorder }) => {
     `}
     >
       <Image
-        fill
+        height={99}
+        width={99}
         style={{ objectFit: 'cover', borderRadius: '100%' }}
         alt={`${fetchedUser?.name} Avatar`}
         onClick={onClick}
         src={fetchedUser?.profileImage || placeholderImage}
+        className='min-w-[48px] sticky'
       />
     </div>
   );
