@@ -11,9 +11,9 @@ const PostFeed: React.FC<PostFeedProps> = ({ userId }) => {
 
   return (
     <>
-      {posts.map((post: Record<string, any>) => (
+      {posts ? posts.map((post: Record<string, any>) => (
         <PostItem userId={userId} key={post.id} data={post} />
-      ))}
+      )) : []}
     </>
   );
 };
