@@ -33,7 +33,7 @@ const UserBio: React.FC<UserBioProps> = ({ userId }) => {
         ) : (
           <Button
             onClick={toggleFollow}
-            label={isFollowing ? 'Unfollow' : 'Follow'}
+            label={isFollowing ? 'Deixar de Segui' : 'Seguir'}
             secondary={!isFollowing}
             outline={isFollowing}
           />
@@ -50,17 +50,17 @@ const UserBio: React.FC<UserBioProps> = ({ userId }) => {
           <p className='text-white'>{fetchedUser?.bio}</p>
           <div className='flex flex-row items-center gap-2 mt-4 text-neutral-500'>
             <BiCalendar size={24} />
-            <p>Joined {createdAt}</p>
+            <p>Entrou em {createdAt}</p>
           </div>
         </div>
         <div className='flex flex-row items-center mt-4 gap-6'>
           <div className='flex flex-row items-center gap-1'>
             <p className='text-white'>{fetchedUser?.followingIds?.length}</p>
-            <p className='text-neutral-500'>Following</p>
+            <p className='text-neutral-500'>Seguindo</p>
           </div>
           <div className='flex flex-row items-center gap-1'>
             <p className='text-white'>{fetchedUser?.followersCount || 0}</p>
-            <p className='text-neutral-500'>Followers</p>
+            <p className='text-neutral-500'>Seguidores</p>
           </div>
         </div>
       </div>

@@ -46,7 +46,7 @@ const LoginModal = () => {
         disabled={isLoading}
       />
       <Input
-        placeholder='Password'
+        placeholder='Senha'
         type='password'
         onChange={(e) => setPassword(e.target.value)}
         value={password}
@@ -58,13 +58,13 @@ const LoginModal = () => {
   const footerContent = (
     <div className='text-neutral-400 text-center mt-4'>
       <p>
-        First time using Twitter?
+        Primeira vez usando Plitter?
         <span
           onClick={onToggle}
           className='text-white cursor-pointer hover:underline'
         >
           {' '}
-          Create an account
+          Criar uma conta
         </span>
       </p>
     </div>
@@ -75,7 +75,7 @@ const LoginModal = () => {
       disabled={isLoading}
       isOpen={loginModal.isOpen}
       title='Login'
-      actionLabel='Sign in'
+      actionLabel='Entrar'
       onClose={loginModal.onClose}
       onSubmit={onSubmit}
       body={bodyContent}

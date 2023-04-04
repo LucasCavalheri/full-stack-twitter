@@ -33,7 +33,7 @@ export default async function handler(
       try {
         await prisma.notification.create({
           data: {
-            body: 'Someone followed you!',
+            body: 'Alguém começou a te seguir',
             userId,
           },
         });

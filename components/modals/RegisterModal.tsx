@@ -28,7 +28,7 @@ const RegisterModal = () => {
         name,
       });
 
-      toast.success('Account created');
+      toast.success('Conta Criada!');
 
       signIn('credentials', {
         email,
@@ -38,7 +38,7 @@ const RegisterModal = () => {
       registerModal.onClose();
     } catch (error) {
       console.log(error);
-      toast.error('Something went wrong');
+      toast.error('Algo deu errado');
     } finally {
       setIsLoading(false);
     }
@@ -60,19 +60,19 @@ const RegisterModal = () => {
         disabled={isLoading}
       />
       <Input
-        placeholder='Name'
+        placeholder='Nome'
         onChange={(e) => setName(e.target.value)}
         value={name}
         disabled={isLoading}
       />
       <Input
-        placeholder='Username'
+        placeholder='Nome de Usuário'
         onChange={(e) => setUsername(e.target.value)}
         value={username}
         disabled={isLoading}
       />
       <Input
-        placeholder='Password'
+        placeholder='Senha'
         type='password'
         onChange={(e) => setPassword(e.target.value)}
         value={password}
@@ -84,13 +84,13 @@ const RegisterModal = () => {
   const footerContent = (
     <div className='text-neutral-400 text-center mt-4'>
       <p>
-        Already have an account?
+        Já possui uma conta?
         <span
           onClick={onToggle}
           className='text-white cursor-pointer hover:underline'
         >
           {' '}
-          Sign in
+          Entrar
         </span>
       </p>
     </div>
@@ -100,8 +100,8 @@ const RegisterModal = () => {
     <Modal
       disabled={isLoading}
       isOpen={registerModal.isOpen}
-      title='Create an Account'
-      actionLabel='Register'
+      title='Criar uma conta'
+      actionLabel='Registrar'
       onClose={registerModal.onClose}
       onSubmit={onSubmit}
       body={bodyContent}

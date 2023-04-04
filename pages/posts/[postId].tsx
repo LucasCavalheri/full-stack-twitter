@@ -23,12 +23,12 @@ const PostView = () => {
 
   return (
     <>
-      <Header label='Tweet' showBackArrow />
+      <Header label='Início' showBackArrow />
       <PostItem data={fetchedPost} />
       <Form
         postId={postId as string}
         isComment
-        placeholder='Tweet your reply'
+        placeholder='Poste sua resposta...'
       />
       <CommentFeed comments={fetchedPost?.comments} />
     </>

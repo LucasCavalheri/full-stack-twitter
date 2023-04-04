@@ -49,11 +49,11 @@ const EditModal = () => {
 
       mutateFetchUser();
 
-      toast.success('Updated');
+      toast.success('Atualizado');
 
       editModal.onClose();
     } catch (error) {
-      toast.error('Something went wrong');
+      toast.error('Algo deu errado');
     } finally {
       setIsLoading(false);
     }
@@ -73,22 +73,22 @@ const EditModal = () => {
         value={profileImage}
         disabled={isLoading}
         onChange={(image) => setProfileImage(image)}
-        label='Upload profile image'
+        label='Atualizar imagem de perfil'
       />
       <ImageUpload
         value={coverImage}
         disabled={isLoading}
         onChange={(image) => setCoverImage(image)}
-        label='Upload cover image'
+        label='Atualizar imagem de fundo'
       />
       <Input
-        placeholder='Name'
+        placeholder='Nome'
         onChange={(e) => setName(e.target.value)}
         value={name}
         disabled={isLoading}
       />
       <Input
-        placeholder='Username'
+        placeholder='Nome de Usuário'
         onChange={(e) => setUsername(e.target.value)}
         value={username}
         disabled={isLoading}
@@ -106,8 +106,8 @@ const EditModal = () => {
     <Modal
       disabled={isLoading}
       isOpen={editModal.isOpen}
-      title='Edit your profile'
-      actionLabel='Save'
+      title='Editar seu perfil'
+      actionLabel='Salvar'
       onClose={editModal.onClose}
       onSubmit={onSubmit}
       body={bodyContent}

@@ -14,19 +14,19 @@ const Sidebar = () => {
 
   const items = [
     {
-      label: 'Home',
+      label: 'Início',
       href: '/',
       icons: BsHouseFill,
     },
     {
-      label: 'Notifications',
+      label: 'Notificações',
       href: '/notifications',
       icon: BsBellFill,
       auth: true,
       alert: currentUser?.hasNotification,
     },
     {
-      label: 'Profile',
+      label: 'Perfil',
       href: `/users/${currentUser?.id}`,
       icon: FaUser,
       auth: true,
@@ -50,19 +50,19 @@ const Sidebar = () => {
           ))} */}
           <SidebarItem 
             href='/'
-            label='Home'
+            label='Início'
             icon={BsHouseFill}
           />
           <SidebarItem 
             href='/notifications'
-            label='Notifications'
+            label='Notificações'
             icon={BsBellFill}
             auth={true}
             alert={currentUser?.hasNotification}
           />
           <SidebarItem 
             href={`/users/${currentUser?.id}`}
-            label='Profile'
+            label='Perfil'
             icon={FaUser}
             auth={true}
           />
@@ -70,7 +70,7 @@ const Sidebar = () => {
             <SidebarItem
               onClick={() => signOut()}
               icon={BiLogOut}
-              label='Logout'
+              label='Sair'
             />
           )}
           <SidebarTweetButton />
