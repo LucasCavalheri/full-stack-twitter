@@ -20,7 +20,7 @@ export default async function handler(
         email,
         username,
         name,
-        hashPassword: hashedPassword,
+        hashedPassword: hashedPassword,
       },
     });
 
