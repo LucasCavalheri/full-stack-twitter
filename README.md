@@ -1,52 +1,63 @@
-<div align='center'>
-  <img width="180px" alt="plitter" src="https://cdn-icons-png.flaticon.com/512/733/733579.png" />
-  <h1>Plitter</h1>
-  <p>
-    Bem-Vindos ao Plitter, uma aplicação FULL-STACK que "simula" o Twitter, onde tem as funcionalidades de Login/Cadastro, postagem, comentar e curtir, atualizar fotos de perfil e de fundo do perfil, além de seguir e deixar de seguir outras pessoas.
-  </p>
-</div>
+# Build and Deploy: TWITTER clone with React, Tailwind, Next, Prisma, Mongo, NextAuth & Vercel (2023)
 
-<br /><hr /><br />
+![Fullstack Twitter Clone (2)](https://user-images.githubusercontent.com/23248726/224405420-03112a76-250a-4283-992c-60e235170678.png)
 
-## 🖥️ Tecnologias
-Este projeto foi desenvolvido usando as seguintes tecnologias:
 
-- **TypeScript** como linguagem;
-- **TailwindCSS** como biblioteca de estilos;
-- **ReactJs com Next** como framework;
-- **NextAuth e JWT** para segurança de rotas;
-- **Prisma e MongoDB** para gerenciamento e manipulação do banco de dados.
+This is a repository for a FullStack Twitter clone tutorial using React, NextJS, TailwindCSS & Prisma.
 
-## 🌐 Teste online
-- Acesse <a href="https://full-stack-twitter.vercel.app/">este site<a/> e você será redirecionado para a versão online
+[VIDEO TUTORIAL](https://www.youtube.com/watch?v=ytkG7RT6SvU)
 
-## ℹ️ Como usar
-Para testar este projeto, precisará das seguintes ferramentas instaladas:
+[DOCKER VERSION by mandeepsingh10](https://github.com/mandeepsingh10/chwitter)
 
-- Git
-- NodeJS
+We are going to learn funcionalities such as:
 
-<br/>
+- Authentication system
+- Notification system
+- Image Upload using Base64 strings
+- Prisma ORM with MongoDB
+- Responsive Layout
+- 1 To Many Relations (User - Post)
+- Many To Many Relations (Post - Comment)
+- Following functionality
+- Comments / Replies
+- Likes functionality
+- Vercel Deployment
 
-```bash
-# Clone ou baixe o repositório
-git clone https://github.com/LucasCavalheri/full-stack-twitter.git
-# Entre no diretório
-cd full-stack-twitter
-# Instale as dependências
-npm install
-# Inicie o servidor local
+### Prerequisites
+
+**Node version 14.x**
+
+### Cloning the repository
+
+```shell
+git clone https://github.com/AntonioErdeljac/twitter-clone.git
+```
+
+### Install packages
+
+```shell
+npm i
+```
+
+### Setup .env file
+
+
+```js
+DATABASE_URL=
+NEXTAUTH_JWT_SECRET=
+NEXTAUTH_SECRET=
+```
+
+### Start the app
+
+```shell
 npm run dev
 ```
 
-<br /><hr /><br />
+## Available commands
 
-<p align='center'>
-  Criado e desenvolvido por <b>Lucas Cavalheri</b>
-  <br/><br/>
+Running commands with npm `npm run [command]`
 
-  <a href="https://www.linkedin.com/in/lucas-cavalheri">
-    <img alt="linkedIn" height="30px" src="https://i.imgur.com/TQRXxhT.png" />
-  </a>
-  &nbsp;&nbsp;
-</p>
+| command         | description                              |
+| :-------------- | :--------------------------------------- |
+| `dev`           | Starts a development instance of the app |

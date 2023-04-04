@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+
 import fetcher from '@/libs/fetcher';
 
 const useNotifications = (userId?: string) => {
@@ -9,8 +10,8 @@ const useNotifications = (userId?: string) => {
     data,
     error,
     isLoading,
-    mutate,
-  };
+    mutate
+  }
 };
 
 export default useNotifications;

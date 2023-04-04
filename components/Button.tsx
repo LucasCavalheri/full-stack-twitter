@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface ButtonProps {
   label: string;
   secondary?: boolean;
@@ -10,20 +8,27 @@ interface ButtonProps {
   outline?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  label,
-  secondary,
-  fullWidth,
-  large,
-  onClick,
-  disabled,
-  outline,
+const Button: React.FC<ButtonProps> = ({ 
+  label, 
+  secondary, 
+  fullWidth, 
+  onClick, 
+  large, 
+  disabled, 
+  outline 
 }) => {
-  return (
+  return ( 
     <button
       disabled={disabled}
       onClick={onClick}
-      className={`disabled:opacity-70 disabled:cursor-not-allowed rounded-full font-semibold hover:opacity-80 transition border-2
+      className={`
+        disabled:opacity-70
+        disabled:cursor-not-allowed
+        rounded-full
+        font-semibold
+        hover:opacity-80
+        transition
+        border-2
         ${fullWidth ? 'w-full' : 'w-fit'}
         ${secondary ? 'bg-white' : 'bg-sky-500'}
         ${secondary ? 'text-black' : 'text-white'}
@@ -34,11 +39,11 @@ const Button: React.FC<ButtonProps> = ({
         ${outline ? 'bg-transparent' : ''}
         ${outline ? 'border-white' : ''}
         ${outline ? 'text-white' : ''}
-      }`}
+      `}
     >
       {label}
     </button>
-  );
-};
-
+   );
+}
+ 
 export default Button;

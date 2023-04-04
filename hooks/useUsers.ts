@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+
 import fetcher from '@/libs/fetcher';
 
 const useUsers = () => {
@@ -8,8 +9,8 @@ const useUsers = () => {
     data,
     error,
     isLoading,
-    mutate,
-  };
+    mutate
+  }
 };
 
 export default useUsers;

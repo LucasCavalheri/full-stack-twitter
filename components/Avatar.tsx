@@ -1,8 +1,9 @@
-import useUser from '@/hooks/useUser';
+import React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import React, { useCallback } from 'react';
-import placeholderImage from '../public/images/placeholder.png';
+import { useCallback } from 'react';
+
+import useUser from '../hooks/useUser';
 
 interface AvatarProps {
   userId: string;
@@ -29,24 +30,25 @@ const Avatar: React.FC<AvatarProps> = ({ userId, isLarge, hasBorder }) => {
   return (
     <div
       className={`
-      ${hasBorder ? 'border-4 border-black' : ''}
-      ${isLarge ? 'h-32' : 'h-12'}
-      ${isLarge ? 'w-32' : 'w-12'}
-      rounded-full
-      hover:opacity-90
-      transition
-      cursor-pointer
-      relative
-    `}
+        ${hasBorder ? 'border-4 border-black' : ''}
+        ${isLarge ? 'h-32' : 'h-12'}
+        ${isLarge ? 'w-32' : 'w-12'}
+        rounded-full 
+        hover:opacity-90 
+        transition 
+        cursor-pointer
+        relative
+      `}
     >
       <Image
-        height={99}
-        width={99}
-        style={{ objectFit: 'cover', borderRadius: '100%' }}
-        alt={`${fetchedUser?.name} Avatar`}
+        fill
+        style={{
+          objectFit: 'cover',
+          borderRadius: '100%',
+        }}
+        alt='Avatar'
         onClick={onClick}
-        src={fetchedUser?.profileImage || placeholderImage}
-        className='min-w-[48px] sticky'
+        src={fetchedUser?.profileImage || '/images/placeholder.png'}
       />
     </div>
   );

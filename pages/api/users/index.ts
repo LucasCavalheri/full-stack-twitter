@@ -1,11 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from "next";
 
 import prisma from '@/libs/prismadb';
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).end();
   }
@@ -13,12 +10,12 @@ export default async function handler(
   try {
     const users = await prisma.user.findMany({
       orderBy: {
-        createdAt: 'desc',
-      },
+        createdAt: 'desc'
+      }
     });
 
     return res.status(200).json(users);
-  } catch (error) {
+  } catch(error) {
     console.log(error);
     return res.status(400).end();
   }

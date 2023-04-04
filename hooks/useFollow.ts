@@ -1,13 +1,14 @@
-import { useCallback, useMemo } from 'react';
-import useCurrentUser from './useCurrentUser';
-import useLoginModal from './useLoginModal';
-import useUser from './useUser';
-import { toast } from 'react-hot-toast';
-import axios from 'axios';
+import axios from "axios";
+import { useCallback, useMemo } from "react";
+import { toast } from "react-hot-toast";
+
+import useCurrentUser from "./useCurrentUser";
+import useLoginModal from "./useLoginModal";
+import useUser from "./useUser";
 
 const useFollow = (userId: string) => {
   const { data: currentUser, mutate: mutateCurrentUser } = useCurrentUser();
-  const { mutate: mutateFetchUser } = useUser(userId);
+  const { mutate: mutateFetchedUser } = useUser(userId);
 
   const loginModal = useLoginModal();
 
@@ -15,10 +16,12 @@ const useFollow = (userId: string) => {
     const list = currentUser?.followingIds || [];
 
     return list.includes(userId);
-  }, [userId, currentUser?.followingIds]);
+  }, [currentUser, userId]);
 
   const toggleFollow = useCallback(async () => {
-    if (!currentUser) return loginModal.onOpen();
+    if (!currentUser) {
+      return loginModal.onOpen();
+    }
 
     try {
       let request;
@@ -30,27 +33,19 @@ const useFollow = (userId: string) => {
       }
 
       await request();
-
       mutateCurrentUser();
-      mutateFetchUser();
+      mutateFetchedUser();
 
-      toast.success('Sucesso!');
+      toast.success('Success');
     } catch (error) {
-      toast.error('Algo deu errado');
+      toast.error('Something went wrong');
     }
-  }, [
-    currentUser,
-    loginModal,
-    isFollowing,
-    userId,
-    mutateCurrentUser,
-    mutateFetchUser,
-  ]);
+  }, [currentUser, isFollowing, userId, mutateCurrentUser, mutateFetchedUser, loginModal]);
 
   return {
     isFollowing,
     toggleFollow,
-  };
-};
+  }
+}
 
 export default useFollow;
