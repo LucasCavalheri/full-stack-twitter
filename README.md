@@ -1,8 +1,8 @@
 <div align='center'>
   <img width="180px" alt="plitter" src="https://cdn-icons-png.flaticon.com/512/733/733579.png" />
-  <h1>Plitter</h1>
+  <h1>Next Social</h1>
   <p>
-    Bem-Vindos ao Plitter, uma aplicação FULL-STACK que "simula" o Twitter, onde tem as funcionalidades de Login/Cadastro, postagem, comentar e curtir, atualizar fotos de perfil e de fundo do perfil, além de seguir e deixar de seguir outras pessoas.
+    Bem-Vindos ao Next Social, uma aplicação FULL-STACK que "simula" o Twitter, onde tem as funcionalidades de Login/Cadastro, postagem, comentar e curtir, atualizar fotos de perfil e de fundo do perfil, além de seguir e deixar de seguir outras pessoas.
   </p>
 </div>
 
